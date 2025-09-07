@@ -6,6 +6,11 @@ It is designed as a **decision-support and cognitive simulation system**, not as
 The goal is to explore **extreme meta-cognition, multi-domain reasoning, and strategic adaptability**.
 
 ---
+🔗 Model Links
+
+🤗 Hugging Face Model: Nexus-Walker/Reson
+📊 Model Card: View on Hugging Face Hub
+💾 Download: Available for download via transformers library or direct download
 
 ## 🎯 Core Focus
 
