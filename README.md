@@ -9,7 +9,7 @@ The goal is to explore **extreme meta-cognition, multi-domain reasoning, and str
 ---
 🔗 Model Links
 
-🤗 Hugging Face Model: Nexus-Walker/Reson
+🤗 Hugging Face Model: [Nexus-Walker/Reson](https://huggingface.co/Nexus-Walker/Reson)
 📊 Model Card: View on Hugging Face Hub
 💾 Download: Available for download via transformers library or direct download
 
