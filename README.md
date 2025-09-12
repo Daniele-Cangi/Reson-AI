@@ -1,4 +1,5 @@
-[README.md](https://github.com/user-attachments/files/22183250/README.md)
+<img width="1536" height="1024" alt="Reson" src="https://github.com/user-attachments/assets/ab5dc731-2ab3-4c10-a522-b090f81cffd0" />
+
 # Reson — LLaMA-2 7B HF Fine-Tuned
 
 Reson is a **fine-tuned version of LLaMA-2 7B HF**, trained on a custom dataset of ~11,000 examples.  
