@@ -15,7 +15,7 @@ The goal is to explore **extreme meta-cognition, multi-domain reasoning, and str
 
 💾 Download: Available for download via transformers library or direct download
 
-Demo transcripts:https://huggingface.co/Nexus-Walker/Reson/blob/main/demo_chat.md
+👁️ Demo transcripts:https://huggingface.co/Nexus-Walker/Reson/blob/main/demo_chat.md
 
 ## 🎯 Core Focus
 
