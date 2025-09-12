@@ -12,7 +12,7 @@ The goal is to explore **extreme meta-cognition, multi-domain reasoning, and str
 🤗 Hugging Face Model: [Nexus-Walker/Reson](https://huggingface.co/Nexus-Walker/Reson)
 📊 Model Card: View on Hugging Face Hub
 💾 Download: Available for download via transformers library or direct download
-
+Demo transcripts:https://huggingface.co/Nexus-Walker/Reson/blob/main/demo_chat.md
 ## 🎯 Core Focus
 
 Reson is tuned for:
