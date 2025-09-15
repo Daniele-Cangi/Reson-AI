@@ -1,38 +1,47 @@
-name: Python CI
+name: CI
 
 on:
   push:
-    branches: [ "**" ]
+    branches: ["**"]
   pull_request:
-    branches: [ "**" ]
+    branches: ["main"]
 
 jobs:
-  ci:
+  test:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Se ci sono file di dipendenze, abilita cache
+      # Enable cache only if dependency files exist
       - name: Setup Python (with cache)
-        if: ${{ hashFiles('**/requirements.txt', '**/pyproject.toml', 'poetry.lock') != '' }}
+        if: ${{ hashFiles('**/requirements*.txt', '**/pyproject.toml', '**/poetry.lock') != '' }}
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
           cache: "pip"
           cache-dependency-path: |
-            **/requirements.txt
+            **/requirements*.txt
             **/pyproject.toml
-            poetry.lock
+            **/poetry.lock
 
-      # Altrimenti, nessuna cache (per progetti standalone senza deps)
+      # Fallback when no dependency files are present (standalone)
       - name: Setup Python (no cache)
-        if: ${{ hashFiles('**/requirements.txt', '**/pyproject.toml', 'poetry.lock') == '' }}
+        if: ${{ hashFiles('**/requirements*.txt', '**/pyproject.toml', '**/poetry.lock') == '' }}
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
 
-      # Esempio di step; modifica/aggiungi i tuoi comandi qui
-      - name: Show Python version
-        run: python --version
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f pyproject.toml ]; then pip install -e . || true; fi
+          pip install pytest
+
+      - name: Run tests
+        run: |
+          pytest -q || { ec=$?; if [ $ec -eq 5 ]; then echo "No tests collected"; exit 0; else exit $ec; fi; }
