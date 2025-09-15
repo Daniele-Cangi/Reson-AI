@@ -35,4 +35,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -q || if [ $? -eq 5 ]; then echo "No tests collected"; exit 0; else exit 1; fi
+          pytest -q || { ec=$?; if [ $ec -eq 5 ]; then echo "No tests collected"; exit 0; else exit $ec; fi; }
