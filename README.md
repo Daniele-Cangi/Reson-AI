@@ -3,6 +3,12 @@
 # Reson — LLaMA-2 7B HF Fine-Tuned
 [![CI](https://github.com/Daniele-Cangi/Reson-AI/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Daniele-Cangi/Reson-AI/actions/workflows/ci.yml)
 
+![Python](https://img.shields.io/badge/python-3.10%20|%203.11-blue)
+
+[![License](https://img.shields.io/github/license/Daniele-Cangi/Reson-AI)](LICENSE)
+
+![Last commit](https://img.shields.io/github/last-commit/Daniele-Cangi/Reson-AI)
+
 Reson is a **fine-tuned version of LLaMA-2 7B HF**, trained on a custom dataset of ~11,000 examples.  
 It is designed as a **decision-support and cognitive simulation system**, not as a generic chatbot.  
 The goal is to explore **extreme meta-cognition, multi-domain reasoning, and strategic adaptability**.
