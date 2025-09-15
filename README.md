@@ -9,6 +9,9 @@
 
 ![Last commit](https://img.shields.io/github/last-commit/Daniele-Cangi/Reson-AI)
 
+[![Code style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Release](https://img.shields.io/github/v/tag/Daniele-Cangi/Reson-AI?label=release)](https://github.com/Daniele-Cangi/Reson-AI/releases)
+
 Reson is a **fine-tuned version of LLaMA-2 7B HF**, trained on a custom dataset of ~11,000 examples.  
 It is designed as a **decision-support and cognitive simulation system**, not as a generic chatbot.  
 The goal is to explore **extreme meta-cognition, multi-domain reasoning, and strategic adaptability**.
