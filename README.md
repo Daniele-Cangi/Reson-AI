@@ -1,6 +1,7 @@
 <img width="1536" height="1024" alt="Reson" src="https://github.com/user-attachments/assets/ab5dc731-2ab3-4c10-a522-b090f81cffd0" />
 
 # Reson — LLaMA-2 7B HF Fine-Tuned
+[![CI](https://github.com/Daniele-Cangi/Reson-AI/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Daniele-Cangi/Reson-AI/actions/workflows/ci.yml)
 
 Reson is a **fine-tuned version of LLaMA-2 7B HF**, trained on a custom dataset of ~11,000 examples.  
 It is designed as a **decision-support and cognitive simulation system**, not as a generic chatbot.  
