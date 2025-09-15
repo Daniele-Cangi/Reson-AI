@@ -34,4 +34,5 @@ jobs:
           pip install pytest
 
       - name: Run tests
-        run: pytest -q
+        run: |
+          pytest -q || if [ $? -eq 5 ]; then echo "No tests collected"; exit 0; else exit 1; fi
